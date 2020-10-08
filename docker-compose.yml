@@ -1,0 +1,8 @@
+version: "3"
+services:
+  worker:
+    build: .
+    restart: always
+    image: registry.webix.io/calendar-node
+    ports:
+      - 3200:3000
