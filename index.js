@@ -80,7 +80,7 @@ app.put("/events/:id", (req, res, next) => {
 			next(err);
 		else {
 			const mode = req.body.recurring_update_mode;
-			if (mode === "unite"){
+			if (mode === "all"){
 				// remove all sub-events
 				db.remove({ origin_id: req.params.id }, { multi: true }, (err, data) => {
 					if (err)
